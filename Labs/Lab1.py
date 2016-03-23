@@ -11,7 +11,7 @@ import codebug_tether.sprites
 codebug=codebug_i2c_tether.CodeBug()
 codebug.open()
 codebug.clear()
-"""
+
 #Q1 Create a variable called favNum and make it equal to your
 #favourite digit, afterwards use codebug.write_text(0,0,str(favNum))
 
@@ -42,7 +42,7 @@ codebug.set_row(3,0b01010)
 codebug.set_row(2,0b00000)
 codebug.set_row(1,0b10001)
 codebug.set_row(0,0b01110)
-"""
+
 #d)Heart shape
 codebug.clear()
 codebug.set_row(4,0b01010)
@@ -50,3 +50,4 @@ codebug.set_row(3,0b11111)
 codebug.set_row(2,0b11111)
 codebug.set_row(1,0b01110)
 codebug.set_row(0,0b00100)
+
