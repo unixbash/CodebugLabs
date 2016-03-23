@@ -28,30 +28,37 @@ class DriveGame:
             self.gamecountdown -= 1
             time.sleep(1)
         codebug.clear()
+
+    def moveTemplate(self, pos, limit, greater, increment):
+        if(greater):
+            if(self.position[pos] > limit):
+                codebug.set_pixel(self.position[0], self.position[1], 0) 
+                if(increment):
+                    self.position[pos] += 1
+                else:
+                    self.position[pos] -= 1
+        else:
+            if(self.position[pos] < limit):
+                codebug.set_pixel(self.position[0], self.position[1], 0) 
+                if(increment):
+                    self.position[pos] += 1
+                else:
+                    self.position[pos] -= 1
+                
+        codebug.set_pixel(self.position[0], self.position[1], 1)
+        
         
     def moveLeft(self):
-        if(self.position[0] < 4):
-            codebug.set_pixel(self.position[0], self.position[1], 0) 
-            self.position[0] += 1 
-        codebug.set_pixel(self.position[0], self.position[1], 1)
+        self.moveTemplate(0,4,False,True)
 
     def moveRight(self):
-        if(self.position[0] > 0):
-            codebug.set_pixel(self.position[0], self.position[1], 0)
-            self.position[0] -= 1 
-        codebug.set_pixel(self.position[0], self.position[1], 1)
+        self.moveTemplate(0,0,True,False)
     
     def moveUp(self):
-        if(self.position[1] > 0):
-            codebug.set_pixel(self.position[0], self.position[1], 0)
-            self.position[1] -= 1 
-        codebug.set_pixel(self.position[0], self.position[1], 1)
+        self.moveTemplate(1,0,True,False)
 
     def moveDown(self):
-        if(self.position[1] < 4):
-            codebug.set_pixel(self.position[0], self.position[1], 0)
-            self.position[1] += 1 
-        codebug.set_pixel(self.position[0], self.position[1], 1)
+        self.moveTemplate(1,4,False,True)
 
 drive=DriveGame()
 
