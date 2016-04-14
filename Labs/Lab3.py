@@ -12,7 +12,7 @@ codebug=codebug_i2c_tether.CodeBug()
 codebug.open()
 codebug.clear()
 
-#Q1 function
+#Q1 function given to the student
 def randNumber():
     rand=random.randint(1,9)
     codebug.write_text(0,0,str(rand))
@@ -55,6 +55,4 @@ elif(codebug.get_input('B')):
     codebug.set_row(2, 0b00101)
     codebug.set_row(1, 0b01000)
     codebug.set_row(0, 0b10000)
-
-
 

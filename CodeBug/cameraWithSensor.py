@@ -23,7 +23,6 @@ def smile():
     codebug.set_row(3, 0b01010)
     codebug.set_row(2, 0b00000)
     codebug.set_row(1, 0b10001)
-
     codebug.set_row(0, 0b01110)    
 
 #Take picture using the camera
