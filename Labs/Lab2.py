@@ -95,6 +95,6 @@ logicGates(True)
 """
 
 #b)The OR Gate
-
+"""
 logicGates(False)
-
+"""

@@ -4,7 +4,6 @@
 
     In this lab students will learn about loops
 """
-import random
 import time
 import codebug_i2c_tether
 import RPi.GPIO as GPIO
@@ -20,7 +19,7 @@ GPIO.setup(8, GPIO.IN)
 
 #Q1 Using a loop, display numbers from 0 to 9 on the LED matrix.
 #The duration of each number showing will be 1 second.
-
+"""
 n=0
 
 while(n < 10):
@@ -28,7 +27,7 @@ while(n < 10):
     codebug.write_text(0,0,str(n))
     n=n+1
     time.sleep(1)
-
+"""
 #Q2 In this question, you need to use a for loop to print out every letter
 #from a string provided to you by the user. (On the CodeBug)
 """
@@ -54,7 +53,7 @@ while(True):
         time.sleep(.5)
         codebug.clear()
     time.sleep(.1)
-"""
+"""   
 
 #Q4 Using a nested loop, create a program that will eluminate a single pixel
 #starting from 0,0 up to 5,5. For an example of the program running look at http://i.imgur.com/Yb9JdOI.gifv
@@ -74,7 +73,7 @@ while(i < 5):
 #Q5 In this question, you wiil put some of the skills you have learned to use, create a
 #small game that will allow the user to move an LED in the middle of the matrix
 #left or right using the two buttons. If you require any hints, look at the Drive game
-"""
+
 position = 2
 codebug.set_pixel(position,2,1)
 
@@ -94,4 +93,4 @@ while(True):
   
     time.sleep(.2)
 
-"""
+
